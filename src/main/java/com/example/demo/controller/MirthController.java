@@ -19,7 +19,6 @@ public class MirthController {
 	@PostMapping("/patient")
 	public Object savePatient(@RequestBody Mirth mirth)
 	{
-		return (mirth.getPatientId().length()==0||mirth.getPatientId().trim().length()==0||mirth.getPatientName().length()==0||
-				mirth.getPatientName().trim().length()==0)?new String("Enter Proper Data"):repo.save(mirth);
+		return (mirth.getPatientId().length()==0||mirth.getPatientId().trim().length()==0)?new String("Enter Proper Data"):repo.save(mirth);
 	}
 }
